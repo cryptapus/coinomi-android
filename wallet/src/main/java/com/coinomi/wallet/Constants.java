@@ -28,6 +28,7 @@ import com.coinomi.core.coins.JumbucksMain;
 import com.coinomi.core.coins.LitecoinMain;
 import com.coinomi.core.coins.LitecoinTest;
 import com.coinomi.core.coins.MonacoinMain;
+import com.coinomi.core.coins.MyriadcoinMain;
 import com.coinomi.core.coins.NamecoinMain;
 import com.coinomi.core.coins.NeoscoinMain;
 import com.coinomi.core.coins.NovacoinMain;
@@ -212,7 +213,9 @@ public class Constants {
             new CoinAddress(ClubcoinMain.get(),     new ServerAddress("club-cce-1.coinomi.net", 5045),
                                                     new ServerAddress("club-cce-2.coinomi.net", 5045)),
             new CoinAddress(RichcoinMain.get(),     new ServerAddress("richx-cce-1.coinomi.net", 5046),
-                                                    new ServerAddress("richx-cce-2.coinomi.net", 5046))
+                                                    new ServerAddress("richx-cce-2.coinomi.net", 5046)),
+            new CoinAddress(MyriadcoinMain.get(),   new ServerAddress("myr-cce-1.coinomi.net", 5047),
+                                                    new ServerAddress("myr-cce-1.coinomi.net", 5047))
     );
 
     public static final HashMap<CoinType, Integer> COINS_ICONS;
@@ -261,6 +264,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.EGULDEN_MAIN.getCoinType(), R.drawable.egulden);
         COINS_ICONS.put(CoinID.CLUBCOIN_MAIN.getCoinType(), R.drawable.clubcoin);
         COINS_ICONS.put(CoinID.RICHCOIN_MAIN.getCoinType(), R.drawable.richcoin);
+        COINS_ICONS.put(CoinID.MYRIADCOIN_MAIN.getCoinType(), R.drawable.myriadcoin);
 
         COINS_BLOCK_EXPLORERS = new HashMap<CoinType, String>();
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://blockchain.info/tx/%s");
@@ -302,6 +306,7 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.ASIACOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/ac/tx.dws?%s.htm");
         COINS_BLOCK_EXPLORERS.put(CoinID.EGULDEN_MAIN.getCoinType(), "https://chainz.cryptoid.info/efl/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.RICHCOIN_MAIN.getCoinType(), "https://explorer.richcoin.us/transaction?transaction=%s");
+        COINS_BLOCK_EXPLORERS.put(CoinID.MYRIADCOIN_MAIN.getCoinType(), "http://insight-myr.cryptap.us/tx/%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
@@ -334,6 +339,7 @@ public class Constants {
             JumbucksMain.get(),
             LitecoinMain.get(),
             MonacoinMain.get(),
+            MyriadcoinMain.get(),
             NamecoinMain.get(),
             NeoscoinMain.get(),
             NovacoinMain.get(),
